@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <style>
+          .container{
+               height: 300px;
+               width: 100%;
+               border: 1px dashed dodgerblue;
+               display: flex;
+               align-items: center;
+          }
+
+          h3{
+               font-weight: 900;
+               font-size: 2em;
+               letter-spacing: 3px;
+               text-align: center;
+          }
+
+          h4{
+               font-weight: 700;
+               font-size: 1.5rem;
+               letter-spacing: 3px;
+               text-align: center;
+          }
+
+          .box{
+               height: 200px;
+               width: 300px;
+               font-weight: 800;
+               font-size: 2rem;
+               padding: 30px;
+               text-align: center;
+               color: white;
+          }
+
+          .box:nth-child(2n){
+               background-color: crimson;
+          }
+
+          .box:nth-child(2n+1){
+               background-color: palevioletred;
+          }
+
+          #box-2{
+               flex-grow: 1;
+          }
+     </style>
+     <title>Flexbox</title>
+</head>
+<body>
+     <h3 style="color: indigo;">Flexbox - Items</h3>
+
+     <h4>flex grow</h4>
+     <div class="container flex-start">
+          <div class="box">Box-1</div>
+          <div class="box" id="box-2">Box-2</div>
+     </div>
+</body>
+</html>
