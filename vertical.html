@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <style>
+          .container{
+               height: 500px;
+               width: 100%;
+               border: 1px dashed dodgerblue;
+               display: flex;
+          }
+
+          h3{
+               font-weight: 900;
+               font-size: 2em;
+               letter-spacing: 3px;
+               text-align: center;
+          }
+
+          h4{
+               font-weight: 700;
+               font-size: 1.5rem;
+               letter-spacing: 3px;
+               text-align: center;
+          }
+
+          .box{
+               width: 300px;
+               font-weight: 800;
+               font-size: 2rem;
+               padding: 30px;
+               text-align: center;
+               color: white;
+          }
+
+          .box:nth-child(2n){
+               background-color: crimson;
+          }
+
+          .box:nth-child(2n+1){
+               background-color: palevioletred;
+          }
+
+          .box:nth-child(3){
+               background-color:darkgray;
+          }
+
+          .align-items-center{
+               align-items: center;
+          }
+
+          .align-items-flex-start{
+               align-items: flex-start;
+          }
+
+          .align-items-flex-end{
+               align-items: flex-end;
+          }
+
+          .align-items-stretch{
+               align-items: stretch;
+          }
+
+          .align-items-baseline{
+               align-items: baseline;
+          }
+     </style>
+     <title>Flexbox</title>
+</head>
+<body>
+     <h3 style="color: indigo;">Flexbox - Vertical Alignment</h3>
+
+     <h4>align-items-center</h4>
+     <div class="container align-items-center">
+          <div class="box">Box-1</div>
+          <div class="box">Box-2</div>
+          <div class="box" style="height: 300px;">Box-3</div>
+          <div class="box">Box-4</div>
+          <div class="box">Box-5</div>
+     </div>
+
+
+     <h4>align-items-flex-start</h4>
+     <div class="container align-items-flex-start">
+          <div class="box">Box-1</div>
+          <div class="box">Box-2</div>
+          <div class="box" style="height: 300px;">Box-3</div>
+          <div class="box">Box-4</div>
+          <div class="box">Box-5</div>
+     </div>
+
+     <h4>align-items-flex-end</h4>
+     <div class="container align-items-flex-end">
+          <div class="box">Box-1</div>
+          <div class="box">Box-2</div>
+          <div class="box" style="height: 300px;">Box-3</div>
+          <div class="box">Box-4</div>
+          <div class="box">Box-5</div>
+     </div>
+
+     <h4>align-items-stretch</h4>
+     <div class="container align-items-stretch">
+          <div class="box">Box-1</div>
+          <div class="box">Box-2</div>
+          <div class="box">Box-3</div>
+          <div class="box">Box-4</div>
+          <div class="box">Box-5</div>
+     </div>
+
+     <h4>align-items-baseline</h4>
+     <div class="container align-items-baseline">
+          <div class="box">Box-1</div>
+          <div class="box">Box-2</div>
+          <div class="box" style="height: 300px;">Box-3</div>
+          <div class="box" style="font-size: 100px;">Box-4</div>
+          <div class="box">Box-5</div>
+     </div>
+</body>
+</html>
