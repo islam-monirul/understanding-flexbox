@@ -10,6 +10,7 @@
                width: 100%;
                border: 1px dashed dodgerblue;
                display: flex;
+               justify-content: center;
                align-items: center;
           }
 
@@ -28,13 +29,17 @@
           }
 
           .box{
-               height: 200px;
-               width: 300px;
                font-weight: 800;
                font-size: 2rem;
                padding: 30px;
+               margin: 10px;
                text-align: center;
                color: white;
+          }
+
+          .item{
+               flex-grow: 1;
+               margin: 0;
           }
 
           .box:nth-child(2n){
@@ -45,8 +50,12 @@
                background-color: palevioletred;
           }
 
-          #box-2{
-               flex-grow: 1;
+          .box:nth-child(3){
+               background-color:darkgray;
+          }
+
+          #box-4{
+               align-self: flex-end;
           }
      </style>
      <title>Flexbox</title>
@@ -54,10 +63,64 @@
 <body>
      <h3 style="color: indigo;">Flexbox - Items</h3>
 
-     <h4>flex grow</h4>
-     <div class="container flex-start">
+     <h4>align-self <span style="color: crimson; font-size: 15px;">align particular item along cross axis</span></h4>
+     <div class="container">
           <div class="box">Box-1</div>
-          <div class="box" id="box-2">Box-2</div>
+          <div class="box">Box-2</div>
+          <div class="box">Box-3</div>
+          <div class="box" id="box-4">Box-4</div>
+          <div class="box">Box-5</div>
      </div>
+
+     <h4>order <span style="color: crimson; font-size: 15px;">lowest ordered box appear first (default 0)</span></h4>
+     <div class="container">
+          <div class="box">Box-1</div>
+          <div class="box">Box-2</div>
+          <div class="box" style="order: 1;">Box-3</div>
+          <div class="box" style="order: -1;">Box-4</div>
+          <div class="box">Box-5</div>
+     </div>
+
+     <h4>flex-grow <br><span style="color: crimson; font-size: 15px;">all the boxes are occupying as much space as they can</span></h4>
+     <div class="container">
+          <div class="box item">Box-1</div>
+          <div class="box item">Box-2</div>
+          <div class="box item">Box-3</div>
+          <div class="box item">Box-4</div>
+          <div class="box item">Box-5</div>
+     </div>
+
+     <h4>flex-grow <br><span style="color: crimson; font-size: 15px;">a different example. Box 3 has higher flex-grow value(3) then others and 3 times bigger than the others</span></h4>
+     <div class="container">
+          <div class="box item">Box-1</div>
+          <div class="box item">Box-2</div>
+          <div class="box item" style="flex-grow: 3;">Box-3</div>
+          <div class="box item">Box-4</div>
+          <div class="box item">Box-5</div>
+     </div>
+
+
+     <h4>flex-basis <br><span style="color: crimson; font-size: 15px;">for setting width of a box. Here box 4 hase flex basis of 300px.</span></h4>
+     <div class="container">
+          <div class="box item">Box-1</div>
+          <div class="box item">Box-2</div>
+          <div class="box item">Box-3</div>
+          <div class="box item" style="flex-basis: 300px;">Box-4</div>
+          <div class="box item">Box-5</div>
+     </div>
+
+     <h4>flex-shrink <br><span style="color: crimson; font-size: 15px;">It defines whether to shrink the element with viewport size or not</span></h4>
+     <div class="container">
+          <div class="box item">Box-1</div>
+          <div class="box item">Box-2</div>
+          <div class="box item">Box-3</div>
+          <div class="box item" style="flex-basis: 300px; flex-shrink: 0;">Box-4</div>
+          <div class="box item">Box-5</div>
+     </div>
+
+
+     <!-- best-practice -->
+          <!-- flex: flex-grow flex-shrink flex-basis; -->
+          <!-- flex: 0 1 300px; -->
 </body>
 </html>
